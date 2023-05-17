@@ -164,6 +164,10 @@ class TrafficSignNode(Node):
                         self.get_logger().info(f"Traffic detected -> {color}")
 
                         detected_traffic_lights.append((color, distance_approximation))
+                    elif coco_label == "person":
+                        detected_signs.append(
+                            ("person", 1.0, distance_approximation)
+                        )
                     elif coco_label == "street sign":
                         detected_signs.append(
                             ("street sign", -1.0, distance_approximation)

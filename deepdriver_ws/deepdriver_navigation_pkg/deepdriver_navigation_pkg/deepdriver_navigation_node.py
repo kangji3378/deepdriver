@@ -264,7 +264,10 @@ class TrafficNavigationNode(Node):
                     continue
 
                 # If object detected:
-                if closest_object.type == "stop sign":
+                if closest_object.type == "person":
+                    self.update_led(color="yellow", blinking=True)
+                    self.update_driving_state(is_driving=False)
+                elif closest_object.type == "stop sign":
                     self.update_led(color="red", blinking=True)
                     self.update_driving_state(is_driving=False)
                 elif closest_object.type == "traffic light":

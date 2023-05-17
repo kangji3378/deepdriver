@@ -114,7 +114,7 @@ COCO_LABELS = {
 }
 
 # Can be changed to detect any of the above LABELS based on use case.
-DETECT_CLASSES = ["traffic light", "stop sign"]
+DETECT_CLASSES = ["person", "traffic light", "stop sign"]
 
 # Confidence threshold for the object detector.
 CONFIDENCE_THRESHOLD = 0.1
